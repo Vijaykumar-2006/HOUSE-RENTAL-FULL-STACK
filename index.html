@@ -7,20 +7,27 @@
     <!-- Google Fonts for premium typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Premium Floating Background Blobs -->
+    <div class="bg-glow blob-1"></div>
+    <div class="bg-glow blob-2"></div>
+    <div class="bg-glow blob-3"></div>
+
     <!-- Top Sticky Header -->
     <header class="app-header">
         <div class="header-container">
             <div class="logo-area">
                 <!-- SVG Icon for Homely House Logo -->
-                <svg class="app-logo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 9.5L12 3L21 9.5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H15V15H9V21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V9.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M9 21V15H15V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                <div class="logo-wrapper">
+                    <svg class="app-logo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 9.5L12 3L21 9.5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H15V15H9V21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V9.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 21V15H15V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
                 <div class="brand-details">
                     <h1 class="app-name">Homely</h1>
                     <span class="app-tagline">Premium House Rental Solutions</span>
@@ -29,12 +36,12 @@
             <!-- Student Portfolio Details Badge -->
             <div class="student-badge">
                 <div class="badge-item">
-                    <span class="badge-label">Student Name:</span>
-                    <span class="badge-value">YOUR_NAME</span>
+                    <span class="badge-label">Student Name</span>
+                    <span class="badge-value">VIJAYKUMAR</span>
                 </div>
                 <div class="badge-item">
-                    <span class="badge-label">Register Number:</span>
-                    <span class="badge-value">YOUR_REGISTER_NO</span>
+                    <span class="badge-label">Register Number</span>
+                    <span class="badge-value">2303717620521058</span>
                 </div>
             </div>
         </div>
@@ -62,8 +69,8 @@
 
     <!-- Announcement Banner using marquee -->
     <div class="announcement-banner">
-        <div class="banner-label">Latest Updates:</div>
-        <marquee behavior="scroll" direction="left" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();" id="announcement-marquee">
+        <div class="banner-label">Latest Updates</div>
+        <marquee behavior="scroll" direction="left" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();" id="announcement-marquee">
             📢 <strong>New Policy:</strong> Security deposit caps reduced to a maximum of 2 months' rent. | 🏢 <strong>Feature Update:</strong> Direct landlord-tenant chat is now active! | 🌟 <strong>Market Alert:</strong> Rental demand has increased by 15% in suburban sectors. | 💳 <strong>Maintenance Notice:</strong> Online payment systems will undergo scheduled upgrades on Saturday at 2:00 AM UTC.
         </marquee>
     </div>
@@ -73,12 +80,35 @@
         <!-- 3. Welcome Section -->
         <section id="home" class="content-section welcome-section">
             <div class="section-card welcome-hero">
-                <div class="hero-text-content">
-                    <h2 class="welcome-title">Welcome to the Homely Management System</h2>
-                    <p class="project-description">
-                        Homely is a state-of-the-art house rental dashboard designed to streamline the leasing experience for landlords, property managers, and tenants. By automating rent collection, tenant screening, maintenance requests, and contract creation, Homely ensures that property management remains modern, organized, and secure.
-                    </p>
+                <div class="hero-layout">
+                    <div class="hero-text-content">
+                        <span class="hero-badge">Smart Rental Dashboard</span>
+                        <h2 class="welcome-title">Streamline Your Rental Management</h2>
+                        <p class="project-description">
+                            Homely is a state-of-the-art house rental platform designed to unify the leasing experience. By automating rent distribution, background checks, maintenance workflows, and electronic lease contracts, Homely bridges the gap between landlords, renters, and maintenance agencies inside a single premium interface.
+                        </p>
+                    </div>
+                    <div class="hero-visual">
+                        <!-- Custom vector-like graphic representation of a home and keys -->
+                        <div class="home-graphic-card">
+                            <div class="home-graphic-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z" />
+                                    <polyline points="9 22 9 12 15 12 15 22" />
+                                </svg>
+                            </div>
+                            <div class="graphic-line-row">
+                                <span class="line line-long"></span>
+                                <span class="line line-short"></span>
+                            </div>
+                            <div class="graphic-line-row">
+                                <span class="line line-medium"></span>
+                                <span class="line line-long"></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="vision-mission-grid">
                     <div class="vm-card vision-card">
                         <div class="vm-icon-wrapper">
@@ -88,7 +118,7 @@
                             </svg>
                         </div>
                         <h3>Our Vision</h3>
-                        <p>To redefine residential renting by creating a seamless, transparent, and digitally empowered ecosystem where finding and managing homes is stress-free.</p>
+                        <p>To redefine residential renting by creating a seamless, transparent, and digitally empowered ecosystem where finding and managing homes is completely stress-free.</p>
                     </div>
                     <div class="vm-card mission-card">
                         <div class="vm-icon-wrapper">
@@ -106,7 +136,10 @@
         <!-- 4. Dashboard Statistics -->
         <section id="dashboard" class="content-section dashboard-section">
             <div class="section-header-row">
-                <h2 class="section-title">Dashboard Overview</h2>
+                <div>
+                    <h2 class="section-title">Operations Control</h2>
+                    <p class="section-subtitle">Real-time statistics of the rental platform ecosystem.</p>
+                </div>
                 <span class="live-indicator">
                     <span class="dot"></span> Live Data
                 </span>
@@ -116,7 +149,7 @@
                 <!-- Stat Card 1 -->
                 <div class="stat-card" id="stat-total-users">
                     <div class="stat-header">
-                        <span class="stat-label">Total Users</span>
+                        <span class="stat-label">Total Registered Users</span>
                         <div class="stat-icon users-bg">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
@@ -127,15 +160,26 @@
                         </div>
                     </div>
                     <div class="stat-body">
-                        <h3 class="stat-value" id="val-total-users">12,480</h3>
-                        <span class="stat-trend trend-up">↑ 12% from last month</span>
+                        <h3 class="stat-value" id="val-total-users">0</h3>
+                        <!-- Sparkline graphic -->
+                        <div class="sparkline-wrapper users-stroke">
+                            <svg class="stat-chart" viewBox="0 0 100 30" preserveAspectRatio="none">
+                                <path d="M0,28 L10,25 L20,27 L30,20 L40,22 L50,15 L60,18 L70,12 L80,10 L90,5 L100,2" fill="none" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <span class="stat-trend trend-up">
+                            <svg class="trend-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="18 15 12 9 6 15"/>
+                            </svg>
+                            12.4% this month
+                        </span>
                     </div>
                 </div>
 
                 <!-- Stat Card 2 -->
                 <div class="stat-card" id="stat-active-users">
                     <div class="stat-header">
-                        <span class="stat-label">Active Users</span>
+                        <span class="stat-label">Active Renters Online</span>
                         <div class="stat-icon active-bg">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
@@ -144,15 +188,25 @@
                         </div>
                     </div>
                     <div class="stat-body">
-                        <h3 class="stat-value" id="val-active-users">8,920</h3>
-                        <span class="stat-trend trend-up">↑ 8.5% daily active</span>
+                        <h3 class="stat-value" id="val-active-users">0</h3>
+                        <div class="sparkline-wrapper active-stroke">
+                            <svg class="stat-chart" viewBox="0 0 100 30" preserveAspectRatio="none">
+                                <path d="M0,28 L10,20 L20,18 L30,22 L40,15 L50,22 L60,12 L70,14 L80,8 L90,10 L100,5" fill="none" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <span class="stat-trend trend-up">
+                            <svg class="trend-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="18 15 12 9 6 15"/>
+                            </svg>
+                            8.5% daily avg
+                        </span>
                     </div>
                 </div>
 
                 <!-- Stat Card 3 -->
                 <div class="stat-card" id="stat-revenue">
                     <div class="stat-header">
-                        <span class="stat-label">Revenue</span>
+                        <span class="stat-label">Monthly Gross Revenue</span>
                         <div class="stat-icon revenue-bg">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <line x1="12" y1="1" x2="12" y2="23"/>
@@ -161,15 +215,25 @@
                         </div>
                     </div>
                     <div class="stat-body">
-                        <h3 class="stat-value" id="val-revenue">$142,500</h3>
-                        <span class="stat-trend trend-up">↑ 18.2% projected</span>
+                        <h3 class="stat-value" id="val-revenue">$0</h3>
+                        <div class="sparkline-wrapper revenue-stroke">
+                            <svg class="stat-chart" viewBox="0 0 100 30" preserveAspectRatio="none">
+                                <path d="M0,29 L10,29 L20,25 L30,22 L40,25 L50,15 L60,10 L70,8 L80,12 L90,4 L100,1" fill="none" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <span class="stat-trend trend-up">
+                            <svg class="trend-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="18 15 12 9 6 15"/>
+                            </svg>
+                            18.2% projected
+                        </span>
                     </div>
                 </div>
 
                 <!-- Stat Card 4 -->
                 <div class="stat-card" id="stat-transactions">
                     <div class="stat-header">
-                        <span class="stat-label">Transactions</span>
+                        <span class="stat-label">Completed Payments</span>
                         <div class="stat-icon transactions-bg">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <rect x="2" y="5" width="20" height="14" rx="2" ry="2"/>
@@ -178,15 +242,25 @@
                         </div>
                     </div>
                     <div class="stat-body">
-                        <h3 class="stat-value" id="val-transactions">2,345</h3>
-                        <span class="stat-trend trend-up">↑ 4.3% this week</span>
+                        <h3 class="stat-value" id="val-transactions">0</h3>
+                        <div class="sparkline-wrapper transactions-stroke">
+                            <svg class="stat-chart" viewBox="0 0 100 30" preserveAspectRatio="none">
+                                <path d="M0,25 L15,22 L30,28 L45,15 L60,18 L75,10 L90,12 L100,5" fill="none" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <span class="stat-trend trend-up">
+                            <svg class="trend-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="18 15 12 9 6 15"/>
+                            </svg>
+                            4.3% this week
+                        </span>
                     </div>
                 </div>
 
                 <!-- Stat Card 5 -->
                 <div class="stat-card" id="stat-notifications">
                     <div class="stat-header">
-                        <span class="stat-label">Notifications</span>
+                        <span class="stat-label">System Notifications</span>
                         <div class="stat-icon notifications-bg">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
@@ -195,15 +269,25 @@
                         </div>
                     </div>
                     <div class="stat-body">
-                        <h3 class="stat-value" id="val-notifications">24</h3>
-                        <span class="stat-trend alert-badge">6 critical alerts</span>
+                        <h3 class="stat-value" id="val-notifications">0</h3>
+                        <div class="sparkline-wrapper notifications-stroke">
+                            <svg class="stat-chart" viewBox="0 0 100 30" preserveAspectRatio="none">
+                                <path d="M0,5 L10,8 L20,12 L30,10 L40,15 L50,14 L60,20 L70,22 L80,18 L90,25 L100,28" fill="none" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <span class="stat-trend trend-down alert-badge">
+                            <svg class="trend-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                            6 critical alerts
+                        </span>
                     </div>
                 </div>
 
                 <!-- Stat Card 6 -->
                 <div class="stat-card" id="stat-pending-tasks">
                     <div class="stat-header">
-                        <span class="stat-label">Pending Tasks</span>
+                        <span class="stat-label">Pending Staff Tasks</span>
                         <div class="stat-icon tasks-bg">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
@@ -215,8 +299,18 @@
                         </div>
                     </div>
                     <div class="stat-body">
-                        <h3 class="stat-value" id="val-pending-tasks">14</h3>
-                        <span class="stat-trend alert-badge">8 high priority</span>
+                        <h3 class="stat-value" id="val-pending-tasks">0</h3>
+                        <div class="sparkline-wrapper tasks-stroke">
+                            <svg class="stat-chart" viewBox="0 0 100 30" preserveAspectRatio="none">
+                                <path d="M0,10 L20,15 L40,8 L60,18 L80,12 L100,20" fill="none" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <span class="stat-trend trend-down alert-badge">
+                            <svg class="trend-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                            8 high priority
+                        </span>
                     </div>
                 </div>
             </div>
@@ -228,42 +322,44 @@
                 <!-- Features Card (Unordered List) -->
                 <div class="section-card features-card">
                     <h2 class="section-card-title">
-                        <svg class="card-title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
-                            <polyline points="2 17 12 22 22 17"/>
-                            <polyline points="2 12 12 17 22 12"/>
-                        </svg>
+                        <div class="icon-title-wrapper features-theme">
+                            <svg class="card-title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                                <polyline points="2 17 12 22 22 17"/>
+                                <polyline points="2 12 12 17 22 12"/>
+                            </svg>
+                        </div>
                         Platform Key Features
                     </h2>
                     <ul class="styled-list features-list" id="features-list">
                         <li>
                             <div class="list-item-content">
-                                <strong>Comprehensive Tenant Background Screening:</strong>
-                                <span>Performs automated identity checks, credit scores, and reference verification.</span>
+                                <strong>Comprehensive Tenant Background Screening</strong>
+                                <span>Performs automated identity checks, credit score validation, and employment/reference verification.</span>
                             </div>
                         </li>
                         <li>
                             <div class="list-item-content">
-                                <strong>Automated Multi-Channel Rent Collection:</strong>
-                                <span>Allows tenants to pay via credit card, ACH, or mobile wallet with automatic landlord payout.</span>
+                                <strong>Automated Multi-Channel Rent Collection</strong>
+                                <span>Allows tenants to pay via credit card, ACH, or mobile wallet with automatic ledger settlement.</span>
                             </div>
                         </li>
                         <li>
                             <div class="list-item-content">
-                                <strong>Instant Digital Lease Agreements:</strong>
-                                <span>Generate customized, legally binding lease drafts in minutes and secure electronic signatures.</span>
+                                <strong>Instant Digital Lease Agreements</strong>
+                                <span>Generate customized, legally compliant lease drafts in minutes and secure digital signatures.</span>
                             </div>
                         </li>
                         <li>
                             <div class="list-item-content">
-                                <strong>Real-Time Maintenance Request Tracker:</strong>
-                                <span>Submit maintenance requests, upload photographs, and monitor contractors live.</span>
+                                <strong>Real-Time Maintenance Request Tracker</strong>
+                                <span>Submit maintenance requests, upload photos, and monitor contractor status in real time.</span>
                             </div>
                         </li>
                         <li>
                             <div class="list-item-content">
-                                <strong>Smart Rental Inventory Mapping:</strong>
-                                <span>Create 3D or visual inventories of houses during move-in and check-out to calculate deposit deductions.</span>
+                                <strong>Smart Rental Inventory Mapping</strong>
+                                <span>Track high-resolution room inventories to compute deposit deductions transparently.</span>
                             </div>
                         </li>
                     </ul>
@@ -272,42 +368,44 @@
                 <!-- Services Card (Ordered List) -->
                 <div class="section-card services-card">
                     <h2 class="section-card-title">
-                        <svg class="card-title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                            <line x1="8" y1="21" x2="16" y2="21"/>
-                            <line x1="12" y1="17" x2="12" y2="21"/>
-                        </svg>
+                        <div class="icon-title-wrapper services-theme">
+                            <svg class="card-title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
                         Offered Services
                     </h2>
                     <ol class="styled-list services-list" id="services-list">
                         <li>
                             <div class="list-item-content">
-                                <strong>24/7 Concierge Support Services:</strong>
-                                <span>In-app emergency line for electrical failures, gas leaks, water damage, or locks replacement.</span>
+                                <strong>24/7 Emergency Concierge Support</strong>
+                                <span>In-app emergency line for electrical failures, water line bursts, gas leaks, or locking issues.</span>
                             </div>
                         </li>
                         <li>
                             <div class="list-item-content">
-                                <strong>Complete Legal and Compliance Guidance:</strong>
-                                <span>Expert lawyers inspect and review rental disputes, eviction procedures, and tax audits.</span>
+                                <strong>Complete Legal and Compliance Guidance</strong>
+                                <span>Expert legal advice for rental agreements, local housing compliance, and arbitration processes.</span>
                             </div>
                         </li>
                         <li>
                             <div class="list-item-content">
-                                <strong>Property Listing Optimization:</strong>
-                                <span>Professional photography and automated syndication to major real estate portals.</span>
+                                <strong>Property Listing Optimization</strong>
+                                <span>Professional listings enhancement with multi-platform syndication and SEO targeting.</span>
                             </div>
                         </li>
                         <li>
                             <div class="list-item-content">
-                                <strong>Financial Bookkeeping & Statements:</strong>
-                                <span>Automatic ledger records, quarterly tax documentation, and detailed cashflow analysis.</span>
+                                <strong>Financial Bookkeeping & Statements</strong>
+                                <span>Detailed financial ledgers, quarterly tax records, and automated cashflow charts.</span>
                             </div>
                         </li>
                         <li>
                             <div class="list-item-content">
-                                <strong>Refurbishment and interior styling consultation:</strong>
-                                <span>Help homeowners remodel apartments to maximize monthly rental valuations.</span>
+                                <strong>Refurbishment and Interior Renovation</strong>
+                                <span>Remodeling advisory services to maximize property value and drive higher monthly yields.</span>
                             </div>
                         </li>
                     </ol>
@@ -315,75 +413,119 @@
             </div>
         </section>
 
-        <!-- 8. Registration Form -->
+        <!-- 8. Registration Form & Info Panel Layout -->
         <section id="reports" class="content-section registration-section">
-            <div class="section-card form-card">
-                <div class="form-header">
-                    <h2 class="form-title">Join Homely Ecosystem</h2>
-                    <p class="form-subtitle">Register as a Tenant, Landlord, or Service Partner to get started.</p>
-                </div>
-
-                <form id="rental-register-form" class="responsive-form" onsubmit="return false;">
-                    <div class="form-grid">
-                        <!-- Full Name -->
-                        <div class="form-group">
-                            <label for="reg-name">Full Name <span class="required">*</span></label>
-                            <input type="text" id="reg-name" name="name" placeholder="Enter your full name" required>
-                        </div>
-
-                        <!-- Email -->
-                        <div class="form-group">
-                            <label for="reg-email">Email Address <span class="required">*</span></label>
-                            <input type="email" id="reg-email" name="email" placeholder="example@homely.com" required>
-                        </div>
-
-                        <!-- Phone Number -->
-                        <div class="form-group">
-                            <label for="reg-phone">Phone Number <span class="required">*</span></label>
-                            <input type="tel" id="reg-phone" name="phone" placeholder="Enter 10-digit mobile number" pattern="[0-9]{10}" required>
-                        </div>
-
-                        <!-- Password -->
-                        <div class="form-group">
-                            <label for="reg-password">Password <span class="required">*</span></label>
-                            <input type="password" id="reg-password" name="password" placeholder="Create a strong password" minlength="6" required>
-                        </div>
-
-                        <!-- Gender (Radio Buttons) -->
-                        <div class="form-group gender-group">
-                            <label>Gender <span class="required">*</span></label>
-                            <div class="radio-options">
-                                <label class="radio-label">
-                                    <input type="radio" name="gender" value="male" required> Male
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="gender" value="female"> Female
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="gender" value="other"> Other
-                                </label>
+            <div class="section-card registration-wrapper">
+                <div class="split-grid-form">
+                    <!-- Info Panel on Left -->
+                    <div class="form-info-panel">
+                        <span class="info-tag">Onboarding Portal</span>
+                        <h2 class="info-panel-title">Let's Get Started</h2>
+                        <p class="info-panel-desc">Join our housing community. Fill out the application form to secure your credential profile.</p>
+                        
+                        <div class="info-bullets">
+                            <div class="bullet-item">
+                                <div class="bullet-icon">🛡️</div>
+                                <div>
+                                    <h4>Encrypted Verification</h4>
+                                    <p>Your details are secured using industry-standard AES encryption keys.</p>
+                                </div>
+                            </div>
+                            <div class="bullet-item">
+                                <div class="bullet-icon">⚡</div>
+                                <div>
+                                    <h4>Instant Account Setup</h4>
+                                    <p>Confirm registration to gain access to premium rentals instantly.</p>
+                                </div>
                             </div>
                         </div>
-
-                        <!-- Date of Birth -->
-                        <div class="form-group">
-                            <label for="reg-dob">Date of Birth <span class="required">*</span></label>
-                            <input type="date" id="reg-dob" name="dob" required>
-                        </div>
-
-                        <!-- Address (Text Area) -->
-                        <div class="form-group full-width">
-                            <label for="reg-address">Permanent Address <span class="required">*</span></label>
-                            <textarea id="reg-address" name="address" rows="3" placeholder="Enter your permanent mailing address" required></textarea>
-                        </div>
                     </div>
 
-                    <!-- Action Buttons -->
-                    <div class="form-actions">
-                        <button type="reset" class="btn btn-secondary" id="btn-reset-form">Reset Form</button>
-                        <button type="submit" class="btn btn-primary" id="btn-submit-form">Register Now</button>
+                    <!-- Registration Form on Right -->
+                    <div class="form-area-container">
+                        <div class="form-header-inline">
+                            <h3 class="form-title">Enter Registration Details</h3>
+                            <p class="form-subtitle">All fields marked with <span class="required">*</span> are mandatory</p>
+                        </div>
+
+                        <form id="rental-register-form" class="responsive-form" onsubmit="return false;">
+                            <div class="form-grid">
+                                <!-- Full Name -->
+                                <div class="form-group">
+                                    <label for="reg-name">Full Name <span class="required">*</span></label>
+                                    <div class="input-wrapper">
+                                        <input type="text" id="reg-name" name="name" placeholder="John Doe" required>
+                                    </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="form-group">
+                                    <label for="reg-email">Email Address <span class="required">*</span></label>
+                                    <div class="input-wrapper">
+                                        <input type="email" id="reg-email" name="email" placeholder="john@example.com" required>
+                                    </div>
+                                </div>
+
+                                <!-- Phone Number -->
+                                <div class="form-group">
+                                    <label for="reg-phone">Phone Number <span class="required">*</span></label>
+                                    <div class="input-wrapper">
+                                        <input type="tel" id="reg-phone" name="phone" placeholder="9876543210" pattern="[0-9]{10}" required>
+                                    </div>
+                                </div>
+
+                                <!-- Password -->
+                                <div class="form-group">
+                                    <label for="reg-password">Password <span class="required">*</span></label>
+                                    <div class="input-wrapper">
+                                        <input type="password" id="reg-password" name="password" placeholder="••••••••" minlength="6" required>
+                                    </div>
+                                </div>
+
+                                <!-- Gender (Radio Buttons) -->
+                                <div class="form-group gender-group">
+                                    <label>Gender <span class="required">*</span></label>
+                                    <div class="radio-options">
+                                        <label class="radio-label">
+                                            <input type="radio" name="gender" value="male" required>
+                                            <span class="custom-radio"></span> Male
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="gender" value="female">
+                                            <span class="custom-radio"></span> Female
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="gender" value="other">
+                                            <span class="custom-radio"></span> Other
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Date of Birth -->
+                                <div class="form-group">
+                                    <label for="reg-dob">Date of Birth <span class="required">*</span></label>
+                                    <div class="input-wrapper">
+                                        <input type="date" id="reg-dob" name="dob" required>
+                                    </div>
+                                </div>
+
+                                <!-- Address (Text Area) -->
+                                <div class="form-group full-width">
+                                    <label for="reg-address">Permanent Address <span class="required">*</span></label>
+                                    <div class="input-wrapper">
+                                        <textarea id="reg-address" name="address" rows="3" placeholder="Enter your complete home address" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="form-actions">
+                                <button type="reset" class="btn btn-secondary" id="btn-reset-form">Reset Form</button>
+                                <button type="submit" class="btn btn-primary" id="btn-submit-form">Register Now</button>
+                            </div>
+                        </form>
                     </div>
-                </form>
+                </div>
             </div>
         </section>
 
@@ -392,7 +534,7 @@
             <div class="section-card table-card">
                 <div class="table-header">
                     <h2 class="table-title">System Architecture Modules</h2>
-                    <p class="table-subtitle">Core microservices powering the Homely rental portal operation.</p>
+                    <p class="table-subtitle">Core API modules and sub-architectures running Homely's rental engines.</p>
                 </div>
                 <div class="table-wrapper">
                     <table class="modules-table" id="app-modules-table">
@@ -400,7 +542,8 @@
                             <tr>
                                 <th>Module ID</th>
                                 <th>Module Name</th>
-                                <th>Description</th>
+                                <th>Operational Description</th>
+                                <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -408,21 +551,25 @@
                                 <td><span class="badge badge-id">MOD-101</span></td>
                                 <td class="module-name">Tenant Dashboard Portal</td>
                                 <td>Handles prospective tenant application vetting, credit scores, profile matching, rent payment pathways, and maintenance dispatch status.</td>
+                                <td><span class="badge-status status-active">Core</span></td>
                             </tr>
                             <tr>
                                 <td><span class="badge badge-id">MOD-102</span></td>
                                 <td class="module-name">Landlord Console Portal</td>
                                 <td>Empowers property owners to catalog housing inventory, evaluate background reports, generate e-signatures, inspect payouts, and dispatch tasks.</td>
+                                <td><span class="badge-status status-active">Core</span></td>
                             </tr>
                             <tr>
                                 <td><span class="badge badge-id">MOD-103</span></td>
                                 <td class="module-name">Admin Control & Audits</td>
                                 <td>Oversees platform compliance, resolves user disputes, generates automated revenue reports, audits listings accuracy, and monitors active server APIs.</td>
+                                <td><span class="badge-status status-stable">Stable</span></td>
                             </tr>
                             <tr>
                                 <td><span class="badge badge-id">MOD-104</span></td>
                                 <td class="module-name">Billing & Ledger Engine</td>
                                 <td>Manages ACH payment tokens, schedules recurring receipts, calculates custom penalty fees, and generates detailed tax breakdown invoices.</td>
+                                <td><span class="badge-status status-beta">Beta</span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -440,7 +587,7 @@
                     
                     <ul class="contact-info-list">
                         <li>
-                            <div class="contact-icon-wrapper">
+                            <div class="contact-icon-wrapper mail-theme">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                                     <polyline points="22,6 12,13 2,6"/>
@@ -452,7 +599,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="contact-icon-wrapper">
+                            <div class="contact-icon-wrapper phone-theme">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                                 </svg>
@@ -463,7 +610,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="contact-icon-wrapper">
+                            <div class="contact-icon-wrapper pin-theme">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                                     <circle cx="12" cy="10" r="3"/>
@@ -521,7 +668,7 @@
     <footer class="app-footer">
         <div class="footer-container">
             <p class="copyright">&copy; 2026 Homely Inc. All rights reserved.</p>
-            <p class="credits">Designed & Developed by <span id="designer-name" class="designer-highlight">YOUR_NAME</span> (Reg No: <span id="designer-reg-no">YOUR_REGISTER_NO</span>)</p>
+            <p class="credits">Designed & Developed by <span id="designer-name" class="designer-highlight">VIJAYKUMAR</span> (Reg No: <span id="designer-reg-no">2303717620521058</span>)</p>
         </div>
     </footer>
 
