@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homely - Developer Control Panel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-glow blob-1"></div>
+    <div class="bg-glow blob-2"></div>
+    <div class="bg-glow blob-3"></div>
+
+    <!-- Password Gate Overlay -->
+    <div class="dev-gate-overlay" id="dev-gate-overlay">
+        <div class="dev-gate-card">
+            <div class="dev-gate-icon">🔐</div>
+            <h3 class="dev-gate-title">Developer Access Only</h3>
+            <p class="dev-gate-subtitle">Enter the developer secret key to access the admin approval control panel.</p>
+            <form id="dev-gate-form" novalidate>
+                <div class="form-group" style="margin-bottom: 1.25rem;">
+                    <div class="input-wrapper">
+                        <input type="password" id="dev-gate-password" placeholder="Enter developer secret key" required style="text-align:center;">
+                    </div>
+                    <span class="error-msg" id="err-dev-gate" style="text-align:center;"></span>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%;">🔓 Unlock Panel</button>
+            </form>
+            <p style="margin-top:1.25rem; font-size:0.75rem; color: var(--text-muted);">
+                <a href="index.html" style="color:var(--accent-primary); text-decoration:none; font-weight:600;">← Return to Homepage</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="app-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <div class="logo-wrapper">
+                    <svg class="app-logo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 9.5L12 3L21 9.5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H15V15H9V21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V9.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 21V15H15V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="brand-details">
+                    <h1 class="app-name">Homely</h1>
+                    <span class="app-tagline">Developer Control Panel</span>
+                </div>
+            </div>
+            <div class="student-badge">
+                <div class="badge-item">
+                    <span class="badge-label">Student Name</span>
+                    <span class="badge-value">VIJAYKUMAR</span>
+                </div>
+                <div class="badge-item">
+                    <span class="badge-label">Register Number</span>
+                    <span class="badge-value">2303717620521058</span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <div class="header-clock" id="header-clock">
+                    <div class="clock-icon">🕒</div>
+                    <div class="clock-details">
+                        <span class="clock-time" id="live-time">00:00:00 AM</span>
+                        <span class="clock-date" id="live-date">Monday, Jan 1, 2026</span>
+                    </div>
+                </div>
+                <div class="theme-switcher-container">
+                    <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle dark/light theme">
+                        <span class="sun-icon">☀️</span>
+                        <span class="moon-icon">🌙</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="app-navbar" id="main-navbar">
+        <div class="nav-container">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="developer.html" class="nav-link active">Dev Panel</a></li>
+                <li><a href="index.html" class="nav-link logout-btn" id="nav-link-logout">Exit Panel</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Panel Content (hidden behind gate) -->
+    <main class="main-content" id="dev-panel-content" style="display:none;">
+        <!-- Header Bar -->
+        <section class="content-section">
+            <div class="dev-panel-header-bar">
+                <div>
+                    <h2 class="dev-panel-title">🛠️ Admin Approval Queue</h2>
+                    <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.25rem;">Review and approve or reject admin access requests</p>
+                </div>
+                <div style="display:flex; gap:0.75rem; align-items:center;">
+                    <span class="dev-notif-badge" id="dev-pending-count">0 Pending</span>
+                    <span class="user-role-badge role-developer">⚡ Developer</span>
+                </div>
+            </div>
+
+            <!-- Stats Row -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+                <div class="section-card" style="padding: 1.25rem; text-align: center;">
+                    <div style="font-size: 1.5rem; margin-bottom: 0.25rem;">📨</div>
+                    <div style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 900;" id="dev-stat-total">0</div>
+                    <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 600;">Total Requests</div>
+                </div>
+                <div class="section-card" style="padding: 1.25rem; text-align: center;">
+                    <div style="font-size: 1.5rem; margin-bottom: 0.25rem;">⏳</div>
+                    <div style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 900; color: #f59e0b;" id="dev-stat-pending">0</div>
+                    <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 600;">Pending</div>
+                </div>
+                <div class="section-card" style="padding: 1.25rem; text-align: center;">
+                    <div style="font-size: 1.5rem; margin-bottom: 0.25rem;">✅</div>
+                    <div style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 900; color: var(--accent-success);" id="dev-stat-approved">0</div>
+                    <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 600;">Approved</div>
+                </div>
+                <div class="section-card" style="padding: 1.25rem; text-align: center;">
+                    <div style="font-size: 1.5rem; margin-bottom: 0.25rem;">❌</div>
+                    <div style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 900; color: var(--accent-danger);" id="dev-stat-rejected">0</div>
+                    <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 600;">Rejected</div>
+                </div>
+            </div>
+
+            <!-- Registered Users Table -->
+            <div class="section-card" style="margin-bottom: 2rem; padding: 1.75rem;">
+                <h3 style="font-family: var(--font-heading); font-size: 1.05rem; font-weight: 800; margin-bottom: 1rem;">👥 Registered Users</h3>
+                <div class="table-wrapper">
+                    <table class="modules-table" id="dev-users-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Joined</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dev-users-tbody">
+                            <tr><td colspan="4" style="text-align:center; color: var(--text-muted);">No registered users yet.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Admin Request Cards -->
+            <h3 style="font-family: var(--font-heading); font-size: 1.05rem; font-weight: 800; margin-bottom: 0.5rem;">🛡️ Admin Access Requests</h3>
+            <div class="admin-request-grid" id="admin-request-grid">
+                <div style="grid-column: 1/-1; text-align:center; color: var(--text-muted); padding: 2rem;">No admin requests received yet.</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <div class="footer-container">
+            <p class="copyright">&copy; 2026 Homely Inc. All rights reserved.</p>
+            <p class="credits">Designed &amp; Developed by <span class="designer-highlight">VIJAYKUMAR</span> (Reg No: 2303717620521058)</p>
+        </div>
+    </footer>
+
+    <div class="toast-notification" id="toast-notif" aria-hidden="true">
+        <div class="toast-body">
+            <span class="toast-message" id="toast-message">Notification details appear here.</span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

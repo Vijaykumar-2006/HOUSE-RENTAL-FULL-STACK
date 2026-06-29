@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homely - Admin Application</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-glow blob-1"></div>
+    <div class="bg-glow blob-2"></div>
+    <div class="bg-glow blob-3"></div>
+
+    <header class="app-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <div class="logo-wrapper">
+                    <svg class="app-logo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 9.5L12 3L21 9.5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H15V15H9V21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V9.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 21V15H15V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="brand-details">
+                    <h1 class="app-name">Homely</h1>
+                    <span class="app-tagline">Premium House Rental Solutions</span>
+                </div>
+            </div>
+            <div class="student-badge">
+                <div class="badge-item">
+                    <span class="badge-label">Student Name</span>
+                    <span class="badge-value">VIJAYKUMAR</span>
+                </div>
+                <div class="badge-item">
+                    <span class="badge-label">Register Number</span>
+                    <span class="badge-value">2303717620521058</span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <div class="header-clock" id="header-clock">
+                    <div class="clock-icon">🕒</div>
+                    <div class="clock-details">
+                        <span class="clock-time" id="live-time">00:00:00 AM</span>
+                        <span class="clock-date" id="live-date">Monday, Jan 1, 2026</span>
+                    </div>
+                </div>
+                <div class="theme-switcher-container">
+                    <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle dark/light theme">
+                        <span class="sun-icon">☀️</span>
+                        <span class="moon-icon">🌙</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="auth-page-wrapper">
+        <div class="auth-split-card">
+            <div class="auth-brand-panel">
+                <div class="auth-brand-logo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/>
+                        <polyline points="9 22 9 12 15 12 15 22"/>
+                    </svg>
+                    <span class="auth-brand-name">Homely</span>
+                </div>
+                <p class="auth-brand-tagline">Admin access requires developer approval</p>
+
+                <h2 class="auth-brand-headline">Apply for <span>Admin Privileges</span></h2>
+
+                <div class="auth-brand-bullets">
+                    <div class="auth-bullet">
+                        <span class="auth-bullet-icon">🛡️</span>
+                        <span>List and manage rental properties</span>
+                    </div>
+                    <div class="auth-bullet">
+                        <span class="auth-bullet-icon">📋</span>
+                        <span>Your request is sent to the developer</span>
+                    </div>
+                    <div class="auth-bullet">
+                        <span class="auth-bullet-icon">⏳</span>
+                        <span>Approval typically within 24 hours</span>
+                    </div>
+                    <div class="auth-bullet">
+                        <span class="auth-bullet-icon">✅</span>
+                        <span>Once approved, login via the Admin tab</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="auth-form-panel">
+                <h3 class="auth-form-title">Admin Application</h3>
+                <p class="auth-form-subtitle">Want a user account instead? <a href="user-register.html">Register as User</a></p>
+
+                <!-- Status display for pending request -->
+                <div id="admin-request-status" style="display:none; margin-bottom:1.5rem; padding:1rem; border-radius: var(--border-radius-md); text-align:center;"></div>
+
+                <form id="admin-register-form" class="auth-form" novalidate>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="areg-name">Full Name <span class="required">*</span></label>
+                            <div class="input-wrapper">
+                                <input type="text" id="areg-name" placeholder="Jane Smith" required>
+                            </div>
+                            <span class="error-msg" id="err-areg-name"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="areg-email">Email Address <span class="required">*</span></label>
+                            <div class="input-wrapper">
+                                <input type="email" id="areg-email" placeholder="admin@company.com" required>
+                            </div>
+                            <span class="error-msg" id="err-areg-email"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="areg-org">Organization / Company <span class="required">*</span></label>
+                            <div class="input-wrapper">
+                                <input type="text" id="areg-org" placeholder="Homely Realty Corp." required>
+                            </div>
+                            <span class="error-msg" id="err-areg-org"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="areg-password">Desired Password <span class="required">*</span></label>
+                            <div class="input-wrapper">
+                                <input type="password" id="areg-password" placeholder="Min 8 characters" required>
+                            </div>
+                            <span class="error-msg" id="err-areg-password"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="areg-reason">Reason for Admin Access <span class="required">*</span></label>
+                            <div class="input-wrapper">
+                                <textarea id="areg-reason" rows="3" placeholder="Explain why you need admin privileges (e.g., property management, tenant oversight)" required></textarea>
+                            </div>
+                            <span class="error-msg" id="err-areg-reason"></span>
+                        </div>
+                    </div>
+                    <div class="form-actions" style="margin-top: 1.5rem;">
+                        <button type="submit" class="btn btn-primary" style="width:100%;">Submit Application</button>
+                    </div>
+                </form>
+
+                <div class="auth-divider">or</div>
+                <div class="auth-links-row">
+                    <a href="login.html">Already approved? Sign in</a>
+                    <a href="index.html">← Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="app-footer">
+        <div class="footer-container">
+            <p class="copyright">&copy; 2026 Homely Inc. All rights reserved.</p>
+            <p class="credits">Designed &amp; Developed by <span class="designer-highlight">VIJAYKUMAR</span> (Reg No: 2303717620521058)</p>
+        </div>
+    </footer>
+
+    <div class="toast-notification" id="toast-notif" aria-hidden="true">
+        <div class="toast-body">
+            <span class="toast-message" id="toast-message">Notification details appear here.</span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

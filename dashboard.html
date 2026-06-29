@@ -122,6 +122,7 @@
                 <li><a href="reports.html" class="nav-link">Reports</a></li>
                 <li><a href="register-home.html" class="nav-link">Register Home</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link login-btn">Login</a></li>
                 <li><a href="#logout" class="nav-link logout-btn" id="nav-link-logout">Logout</a></li>
             </ul>
         </div>
@@ -246,7 +247,39 @@
                 <div style="grid-column: 1/-1; text-align: center; color: var(--text-muted);">Loading property listings database...</div>
             </div>
         </section>
+
+        <!-- My Properties Activity (Rented / Bought) -->
+        <section class="content-section scroll-reveal" id="my-properties-section" style="display:none;">
+            <div class="section-header-row">
+                <div>
+                    <h2 class="section-title">My Properties</h2>
+                    <p class="section-subtitle">Your rented and purchased property history.</p>
+                </div>
+            </div>
+            <div class="user-activity-grid" id="user-activity-grid">
+                <div style="grid-column: 1/-1; text-align:center; color: var(--text-muted); padding: 1.5rem;">You haven't rented or bought any properties yet.</div>
+            </div>
+        </section>
     </main>
+
+    <!-- Rent / Buy Confirmation Modal -->
+    <div class="modal-overlay" id="rent-buy-modal">
+        <div class="modal-card">
+            <button class="modal-close-btn" id="modal-close-btn" onclick="closeRentBuyModal()">×</button>
+            <div class="modal-icon" id="modal-icon">🏠</div>
+            <h3 class="modal-title" id="modal-title">Confirm Action</h3>
+            <p class="modal-subtitle" id="modal-subtitle">Review the details below before confirming.</p>
+            <div class="modal-property-info">
+                <h4 id="modal-prop-title">Property Title</h4>
+                <p id="modal-prop-location">📍 Location</p>
+                <div class="modal-price-tag" id="modal-prop-price">$0/month</div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" onclick="closeRentBuyModal()">Cancel</button>
+                <button class="btn btn-primary" id="modal-confirm-btn" onclick="confirmRentBuy()">Confirm</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="app-footer">
@@ -263,7 +296,7 @@
         </svg>
     </button>
 
-    <!-- Toast Toast -->
+    <!-- Toast -->
     <div class="toast-notification" id="toast-notif" aria-hidden="true">
         <div class="toast-body">
             <span class="toast-message" id="toast-message">Notification details appear here.</span>
