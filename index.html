@@ -30,7 +30,7 @@
                 </div>
                 <div class="brand-details">
                     <h1 class="app-name">Homely</h1>
-                    <span class="app-tagline">Premium House Rental Solutions</span>
+                    <span class="app-tagline" id="typing-tagline">Premium House Rental Solutions</span>
                 </div>
             </div>
             <!-- Student Portfolio Details Badge -->
@@ -42,6 +42,73 @@
                 <div class="badge-item">
                     <span class="badge-label">Register Number</span>
                     <span class="badge-value">2303717620521058</span>
+                </div>
+            </div>
+
+            <!-- Header Interaction Actions (Clock, Theme, Notifications) -->
+            <div class="header-actions">
+                <!-- Live Clock Area -->
+                <div class="header-clock" id="header-clock">
+                    <div class="clock-icon">🕒</div>
+                    <div class="clock-details">
+                        <span class="clock-time" id="live-time">00:00:00 AM</span>
+                        <span class="clock-date" id="live-date">Monday, Jan 1, 2026</span>
+                    </div>
+                </div>
+                
+                <!-- Theme Switcher Button -->
+                <div class="theme-switcher-container">
+                    <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle dark/light theme">
+                        <span class="sun-icon">☀️</span>
+                        <span class="moon-icon">🌙</span>
+                    </button>
+                </div>
+
+                <!-- Notification Bell -->
+                <div class="notification-trigger-container" id="notif-trigger-container">
+                    <button class="notif-bell-btn" id="notif-bell-btn" aria-label="Toggle notifications">
+                        <svg class="bell-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                        </svg>
+                        <span class="notif-badge-count" id="notif-badge-count">3</span>
+                    </button>
+                    <!-- Notification Dropdown Panel -->
+                    <div class="notif-dropdown-panel" id="notif-dropdown-panel" aria-hidden="true">
+                        <div class="notif-panel-header">
+                            <h4>System Alerts</h4>
+                            <button class="clear-all-btn" id="clear-all-notifs">Clear All</button>
+                        </div>
+                        <div class="notif-list-container" id="notif-list-container">
+                            <div class="notif-item" data-id="1">
+                                <span class="notif-icon success">🟢</span>
+                                <div class="notif-content">
+                                    <p class="notif-text">Rent payment of $1,450 for Unit 4B collected successfully.</p>
+                                    <span class="notif-time">10 mins ago</span>
+                                </div>
+                                <button class="notif-dismiss" aria-label="Dismiss">×</button>
+                            </div>
+                            <div class="notif-item" data-id="2">
+                                <span class="notif-icon warning">🟡</span>
+                                <div class="notif-content">
+                                    <p class="notif-text">Maintenance Request #302: AC repair assigned to Technician.</p>
+                                    <span class="notif-time">2 hours ago</span>
+                                </div>
+                                <button class="notif-dismiss" aria-label="Dismiss">×</button>
+                            </div>
+                            <div class="notif-item" data-id="3">
+                                <span class="notif-icon info">🔵</span>
+                                <div class="notif-content">
+                                    <p class="notif-text">New tenant application received for 742 Evergreen Terrace.</p>
+                                    <span class="notif-time">1 day ago</span>
+                                </div>
+                                <button class="notif-dismiss" aria-label="Dismiss">×</button>
+                            </div>
+                        </div>
+                        <div class="notif-panel-footer">
+                            <a href="#dashboard" class="view-all-notifs">Go to Operations Control</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -58,9 +125,9 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="#home" class="nav-link active" id="nav-link-home">Home</a></li>
                 <li><a href="#dashboard" class="nav-link" id="nav-link-dashboard">Dashboard</a></li>
+                <li><a href="#features" class="nav-link" id="nav-link-features">Features</a></li>
                 <li><a href="#services" class="nav-link" id="nav-link-services">Services</a></li>
                 <li><a href="#reports" class="nav-link" id="nav-link-reports">Reports</a></li>
-                <li><a href="#about" class="nav-link" id="nav-link-about">About</a></li>
                 <li><a href="#contact" class="nav-link" id="nav-link-contact">Contact</a></li>
                 <li><a href="#logout" class="nav-link logout-btn" id="nav-link-logout">Logout</a></li>
             </ul>
@@ -78,11 +145,11 @@
     <!-- Main Container -->
     <main class="main-content">
         <!-- 3. Welcome Section -->
-        <section id="home" class="content-section welcome-section">
+        <section id="home" class="content-section welcome-section animate-fade-in">
             <div class="section-card welcome-hero">
                 <div class="hero-layout">
                     <div class="hero-text-content">
-                        <span class="hero-badge">Smart Rental Dashboard</span>
+                        <span class="hero-badge animate-pulse">Smart Rental Dashboard</span>
                         <h2 class="welcome-title">Streamline Your Rental Management</h2>
                         <p class="project-description">
                             Homely is a state-of-the-art house rental platform designed to unify the leasing experience. By automating rent distribution, background checks, maintenance workflows, and electronic lease contracts, Homely bridges the gap between landlords, renters, and maintenance agencies inside a single premium interface.
@@ -128,6 +195,49 @@
                         </div>
                         <h3>Our Mission</h3>
                         <p>To provide managers and tenants with robust automated tools, real-time analytics, and instant support to ensure safe and happy housing communities globally.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Slider / Carousel Section -->
+            <div class="section-card property-carousel-container" style="margin-top: 2rem;">
+                <div class="carousel-header">
+                    <h3 class="carousel-title">Featured Premium Listings</h3>
+                    <p class="carousel-subtitle">Explore a selection of our handpicked rental estates available today.</p>
+                </div>
+                <div class="carousel-slider" id="property-slider">
+                    <!-- Slides -->
+                    <div class="carousel-slide active" data-slide="0">
+                        <img src="images/villa_exterior.png" alt="Luxury Villa Exterior" class="slider-image">
+                        <div class="slide-caption">
+                            <h4>The Summit Glass Villa</h4>
+                            <p>📍 Beverly Hills, CA | 5 Beds, 6 Baths | $4,500/month</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide" data-slide="1">
+                        <img src="images/apartment_interior.png" alt="Modern Penthouse Living" class="slider-image">
+                        <div class="slide-caption">
+                            <h4>Metropolitan Loft Penthouse</h4>
+                            <p>📍 Manhattan, NY | 3 Beds, 3 Baths | $3,800/month</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide" data-slide="2">
+                        <img src="images/cabin_forest.png" alt="Forest Cabin Retreat" class="slider-image">
+                        <div class="slide-caption">
+                            <h4>Eldorado Forest Cabin</h4>
+                            <p>📍 Aspen, CO | 4 Beds, 3.5 Baths | $2,900/month</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Manual Navigation Arrows -->
+                    <button class="slider-arrow arrow-left" id="slider-arrow-left" aria-label="Previous image">‹</button>
+                    <button class="slider-arrow arrow-right" id="slider-arrow-right" aria-label="Next image">›</button>
+                    
+                    <!-- Slide Dots -->
+                    <div class="slider-dots" id="slider-dots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
                     </div>
                 </div>
             </div>
@@ -316,106 +426,140 @@
             </div>
         </section>
 
-        <!-- 5 & 6. Features & Services Section -->
-        <section id="services" class="content-section features-services-section">
-            <div class="split-grid">
-                <!-- Features Card (Unordered List) -->
-                <div class="section-card features-card">
-                    <h2 class="section-card-title">
-                        <div class="icon-title-wrapper features-theme">
-                            <svg class="card-title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
-                                <polyline points="2 17 12 22 22 17"/>
-                                <polyline points="2 12 12 17 22 12"/>
-                            </svg>
-                        </div>
-                        Platform Key Features
-                    </h2>
-                    <ul class="styled-list features-list" id="features-list">
-                        <li>
-                            <div class="list-item-content">
-                                <strong>Comprehensive Tenant Background Screening</strong>
-                                <span>Performs automated identity checks, credit score validation, and employment/reference verification.</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="list-item-content">
-                                <strong>Automated Multi-Channel Rent Collection</strong>
-                                <span>Allows tenants to pay via credit card, ACH, or mobile wallet with automatic ledger settlement.</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="list-item-content">
-                                <strong>Instant Digital Lease Agreements</strong>
-                                <span>Generate customized, legally compliant lease drafts in minutes and secure digital signatures.</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="list-item-content">
-                                <strong>Real-Time Maintenance Request Tracker</strong>
-                                <span>Submit maintenance requests, upload photos, and monitor contractor status in real time.</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="list-item-content">
-                                <strong>Smart Rental Inventory Mapping</strong>
-                                <span>Track high-resolution room inventories to compute deposit deductions transparently.</span>
-                            </div>
-                        </li>
-                    </ul>
+        <!-- 5. Features Section -->
+        <section id="features" class="content-section features-section scroll-reveal">
+            <div class="section-header-row">
+                <div>
+                    <h2 class="section-title">Platform Features</h2>
+                    <p class="section-subtitle">Cutting-edge tools that empower modern landlords and tenants.</p>
                 </div>
-
-                <!-- Services Card (Ordered List) -->
-                <div class="section-card services-card">
-                    <h2 class="section-card-title">
-                        <div class="icon-title-wrapper services-theme">
-                            <svg class="card-title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                                <line x1="8" y1="21" x2="16" y2="21"/>
-                                <line x1="12" y1="17" x2="12" y2="21"/>
-                            </svg>
-                        </div>
-                        Offered Services
-                    </h2>
-                    <ol class="styled-list services-list" id="services-list">
-                        <li>
-                            <div class="list-item-content">
-                                <strong>24/7 Emergency Concierge Support</strong>
-                                <span>In-app emergency line for electrical failures, water line bursts, gas leaks, or locking issues.</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="list-item-content">
-                                <strong>Complete Legal and Compliance Guidance</strong>
-                                <span>Expert legal advice for rental agreements, local housing compliance, and arbitration processes.</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="list-item-content">
-                                <strong>Property Listing Optimization</strong>
-                                <span>Professional listings enhancement with multi-platform syndication and SEO targeting.</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="list-item-content">
-                                <strong>Financial Bookkeeping & Statements</strong>
-                                <span>Detailed financial ledgers, quarterly tax records, and automated cashflow charts.</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="list-item-content">
-                                <strong>Refurbishment and Interior Renovation</strong>
-                                <span>Remodeling advisory services to maximize property value and drive higher monthly yields.</span>
-                            </div>
-                        </li>
-                    </ol>
+            </div>
+            <div class="features-grid">
+                <!-- Feature Card 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper f-theme-1">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-card-title">Tenant Screening</h3>
+                    <p class="feature-card-desc">Comprehensive background checks including credit scores, employment history, and prior eviction checks.</p>
+                </div>
+                <!-- Feature Card 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper f-theme-2">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="5" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="2" y1="10" x2="22" y2="10"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-card-title">Automated Rent</h3>
+                    <p class="feature-card-desc">Scheduled rent withdrawals with automatic ACH/Credit card transactions and real-time bank ledger settlement.</p>
+                </div>
+                <!-- Feature Card 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper f-theme-3">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-card-title">Digital Leases</h3>
+                    <p class="feature-card-desc">Generate instantly customized, legally-binding lease contracts with integrated digital signature capture.</p>
+                </div>
+                <!-- Feature Card 4 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper f-theme-4">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-card-title">Maintenance Tracker</h3>
+                    <p class="feature-card-desc">Submit maintenance orders, upload repair photos, assign tasks to technicians, and monitor status updates.</p>
+                </div>
+                <!-- Feature Card 5 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper f-theme-5">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                            <polyline points="2 17 12 22 22 17"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-card-title">Inventory Mapping</h3>
+                    <p class="feature-card-desc">Keep track of property furniture, condition records, and room audits to resolve security deposit claims.</p>
+                </div>
+                <!-- Feature Card 6 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper f-theme-6">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-card-title">Law Compliance</h3>
+                    <p class="feature-card-desc">Instant compliance review checks of lease terms against regional landlord-tenant state laws.</p>
                 </div>
             </div>
         </section>
 
-        <!-- 8. Registration Form & Info Panel Layout -->
-        <section id="reports" class="content-section registration-section">
-            <div class="section-card registration-wrapper">
+        <!-- 6. Services Section -->
+        <section id="services" class="content-section services-section scroll-reveal">
+            <div class="section-header-row">
+                <div>
+                    <h2 class="section-title">Our Premium Services</h2>
+                    <p class="section-subtitle">Dedicated professional services to elevate your real estate management.</p>
+                </div>
+            </div>
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card">
+                    <div class="service-icon-wrapper">☎️</div>
+                    <h3 class="service-card-title">24/7 Concierge Support</h3>
+                    <p class="service-card-desc">Around-the-clock emergency support for building issues, plumbing emergencies, or lockout situations.</p>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="service-card">
+                    <div class="service-icon-wrapper">⚖️</div>
+                    <h3 class="service-card-title">Legal & Compliance Advice</h3>
+                    <p class="service-card-desc">Expert consultations to ensure all listings, leases, and disputes adhere strictly to state housing laws.</p>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="service-card">
+                    <div class="service-icon-wrapper">📈</div>
+                    <h3 class="service-card-title">Listing Optimization</h3>
+                    <p class="service-card-desc">Professional staging tips, photography suggestions, and automated portal distribution to decrease vacancy rates.</p>
+                </div>
+                <!-- Service Card 4 -->
+                <div class="service-card">
+                    <div class="service-icon-wrapper">📊</div>
+                    <h3 class="service-card-title">Bookkeeping & Tax Reports</h3>
+                    <p class="service-card-desc">Automatically compiled income statements, maintenance logs, and structured quarterly tax filing files.</p>
+                </div>
+                <!-- Service Card 5 -->
+                <div class="service-card">
+                    <div class="service-icon-wrapper">🔨</div>
+                    <h3 class="service-card-title">Property Refurbishment</h3>
+                    <p class="service-card-desc">Connect with certified renovation agencies to refurbish spaces, yielding 15-20% higher rental pricing.</p>
+                </div>
+                <!-- Service Card 6 -->
+                <div class="service-card">
+                    <div class="service-icon-wrapper">🛡️</div>
+                    <h3 class="service-card-title">Premium Insurance Shield</h3>
+                    <p class="service-card-desc">Comprehensive landlord policy options protecting against property damage, accidental losses, and rent defaults.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Reports & Registration Section (Registration Portal + Modules Table) -->
+        <section id="reports" class="content-section reports-section scroll-reveal">
+            <div class="section-header-row" style="margin-bottom: 1.5rem;">
+                <div>
+                    <h2 class="section-title">Ecosystem Reporting & Registration</h2>
+                    <p class="section-subtitle">Manage user profiles and monitor core system architecture status.</p>
+                </div>
+            </div>
+            
+            <div class="section-card registration-wrapper" style="margin-bottom: 2.5rem;">
                 <div class="split-grid-form">
                     <!-- Info Panel on Left -->
                     <div class="form-info-panel">
@@ -448,7 +592,7 @@
                             <p class="form-subtitle">All fields marked with <span class="required">*</span> are mandatory</p>
                         </div>
 
-                        <form id="rental-register-form" class="responsive-form" onsubmit="return false;">
+                        <form id="rental-register-form" class="responsive-form" novalidate>
                             <div class="form-grid">
                                 <!-- Full Name -->
                                 <div class="form-group">
@@ -456,6 +600,7 @@
                                     <div class="input-wrapper">
                                         <input type="text" id="reg-name" name="name" placeholder="John Doe" required>
                                     </div>
+                                    <span class="error-msg" id="err-name"></span>
                                 </div>
 
                                 <!-- Email -->
@@ -464,22 +609,25 @@
                                     <div class="input-wrapper">
                                         <input type="email" id="reg-email" name="email" placeholder="john@example.com" required>
                                     </div>
+                                    <span class="error-msg" id="err-email"></span>
                                 </div>
 
                                 <!-- Phone Number -->
                                 <div class="form-group">
                                     <label for="reg-phone">Phone Number <span class="required">*</span></label>
                                     <div class="input-wrapper">
-                                        <input type="tel" id="reg-phone" name="phone" placeholder="9876543210" pattern="[0-9]{10}" required>
+                                        <input type="tel" id="reg-phone" name="phone" placeholder="9876543210" required>
                                     </div>
+                                    <span class="error-msg" id="err-phone"></span>
                                 </div>
 
                                 <!-- Password -->
                                 <div class="form-group">
                                     <label for="reg-password">Password <span class="required">*</span></label>
                                     <div class="input-wrapper">
-                                        <input type="password" id="reg-password" name="password" placeholder="••••••••" minlength="6" required>
+                                        <input type="password" id="reg-password" name="password" placeholder="••••••••" required>
                                     </div>
+                                    <span class="error-msg" id="err-password"></span>
                                 </div>
 
                                 <!-- Gender (Radio Buttons) -->
@@ -499,6 +647,7 @@
                                             <span class="custom-radio"></span> Other
                                         </label>
                                     </div>
+                                    <span class="error-msg" id="err-gender"></span>
                                 </div>
 
                                 <!-- Date of Birth -->
@@ -507,6 +656,7 @@
                                     <div class="input-wrapper">
                                         <input type="date" id="reg-dob" name="dob" required>
                                     </div>
+                                    <span class="error-msg" id="err-dob"></span>
                                 </div>
 
                                 <!-- Address (Text Area) -->
@@ -515,6 +665,7 @@
                                     <div class="input-wrapper">
                                         <textarea id="reg-address" name="address" rows="3" placeholder="Enter your complete home address" required></textarea>
                                     </div>
+                                    <span class="error-msg" id="err-address"></span>
                                 </div>
                             </div>
 
@@ -527,10 +678,8 @@
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- 9. Application Modules Table -->
-        <section id="about" class="content-section modules-section">
+            <!-- System Architecture Modules Table -->
             <div class="section-card table-card">
                 <div class="table-header">
                     <h2 class="table-title">System Architecture Modules</h2>
@@ -573,6 +722,17 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
+                
+                <!-- System Progress Bar (Dynamic Statistics Indicator) -->
+                <div class="system-progress-container" style="margin-top: 2rem;">
+                    <div class="progress-details" style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 0.5rem; font-weight: 700; color: var(--text-muted);">
+                        <span>🏡 Occupancy Allocation Rate</span>
+                        <span id="occupancy-rate-label">0%</span>
+                    </div>
+                    <div class="progress-track" style="height: 10px; background: rgba(255, 255, 255, 0.05); border-radius: 5px; overflow: hidden; position: relative;">
+                        <div class="progress-bar-fill" id="occupancy-progress-bar" style="width: 0%; height: 100%; background: var(--accent-gradient); transition: width 2s cubic-bezier(0.1, 0.8, 0.1, 1);"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -671,6 +831,13 @@
             <p class="credits">Designed & Developed by <span id="designer-name" class="designer-highlight">VIJAYKUMAR</span> (Reg No: <span id="designer-reg-no">2303717620521058</span>)</p>
         </div>
     </footer>
+
+    <!-- Floating Back to Top Button -->
+    <button class="back-to-top-btn" id="back-to-top-btn" aria-label="Scroll back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="18 15 12 9 6 15"/>
+        </svg>
+    </button>
 
     <!-- Custom Modal/Toast for interactions -->
     <div class="toast-notification" id="toast-notif" aria-hidden="true">
