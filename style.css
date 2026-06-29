@@ -373,6 +373,15 @@ marquee strong {
     scroll-margin-top: 100px;
 }
 
+.section-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
 .section-title {
     font-family: var(--font-heading);
     font-size: 1.8rem;
