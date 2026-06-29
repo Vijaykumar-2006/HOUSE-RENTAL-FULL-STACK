@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homely - Register Your Home For Rent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-glow blob-1"></div>
+    <div class="bg-glow blob-2"></div>
+    <div class="bg-glow blob-3"></div>
+
+    <!-- Header -->
+    <header class="app-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <div class="logo-wrapper">
+                    <svg class="app-logo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 9.5L12 3L21 9.5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H15V15H9V21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V9.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 21V15H15V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="brand-details">
+                    <h1 class="app-name">Homely</h1>
+                    <span class="app-tagline">Premium House Rental Solutions</span>
+                </div>
+            </div>
+            <div class="student-badge">
+                <div class="badge-item">
+                    <span class="badge-label">Student Name</span>
+                    <span class="badge-value">VIJAYKUMAR</span>
+                </div>
+                <div class="badge-item">
+                    <span class="badge-label">Register Number</span>
+                    <span class="badge-value">2303717620521058</span>
+                </div>
+            </div>
+
+            <div class="header-actions">
+                <div class="header-clock" id="header-clock">
+                    <div class="clock-icon">🕒</div>
+                    <div class="clock-details">
+                        <span class="clock-time" id="live-time">00:00:00 AM</span>
+                        <span class="clock-date" id="live-date">Monday, Jan 1, 2026</span>
+                    </div>
+                </div>
+                <div class="theme-switcher-container">
+                    <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle dark/light theme">
+                        <span class="sun-icon">☀️</span>
+                        <span class="moon-icon">🌙</span>
+                    </button>
+                </div>
+                <div class="notification-trigger-container" id="notif-trigger-container">
+                    <button class="notif-bell-btn" id="notif-bell-btn" aria-label="Toggle notifications">
+                        <svg class="bell-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                        </svg>
+                        <span class="notif-badge-count" id="notif-badge-count">3</span>
+                    </button>
+                    <div class="notif-dropdown-panel" id="notif-dropdown-panel" aria-hidden="true">
+                        <div class="notif-panel-header">
+                            <h4>System Alerts</h4>
+                            <button class="clear-all-btn" id="clear-all-notifs">Clear All</button>
+                        </div>
+                        <div class="notif-list-container" id="notif-list-container">
+                            <div class="notif-item" data-id="1">
+                                <span class="notif-icon success">🟢</span>
+                                <div class="notif-content">
+                                    <p class="notif-text">Rent payment of $1,450 for Unit 4B collected successfully.</p>
+                                    <span class="notif-time">10 mins ago</span>
+                                </div>
+                                <button class="notif-dismiss" aria-label="Dismiss">×</button>
+                            </div>
+                            <div class="notif-item" data-id="2">
+                                <span class="notif-icon warning">🟡</span>
+                                <div class="notif-content">
+                                    <p class="notif-text">Maintenance Request #302: AC repair assigned to Technician.</p>
+                                    <span class="notif-time">2 hours ago</span>
+                                </div>
+                                <button class="notif-dismiss" aria-label="Dismiss">×</button>
+                            </div>
+                            <div class="notif-item" data-id="3">
+                                <span class="notif-icon info">🔵</span>
+                                <div class="notif-content">
+                                    <p class="notif-text">New tenant application received for 742 Evergreen Terrace.</p>
+                                    <span class="notif-time">1 day ago</span>
+                                </div>
+                                <button class="notif-dismiss" aria-label="Dismiss">×</button>
+                            </div>
+                        </div>
+                        <div class="notif-panel-footer">
+                            <a href="dashboard.html" class="view-all-notifs">Go to Operations Control</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="app-navbar" id="main-navbar">
+        <div class="nav-container">
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="features.html" class="nav-link">Features</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="reports.html" class="nav-link">Reports</a></li>
+                <li><a href="register-home.html" class="nav-link active">Register Home</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="#logout" class="nav-link logout-btn" id="nav-link-logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section id="register-home" class="content-section scroll-reveal visible">
+            <div class="section-header-row" style="margin-bottom: 1.75rem;">
+                <div>
+                    <h2 class="section-title">List Your Property For Rent</h2>
+                    <p class="section-subtitle">Register your home and reach thousands of verified tenants across the Homely network.</p>
+                </div>
+                <a href="dashboard.html" class="btn btn-secondary" style="text-decoration:none; font-size:0.8rem; padding:0.5rem 1rem;">View Listings</a>
+            </div>
+
+            <!-- Info Cards Row -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+                <div class="section-card" style="padding: 1.25rem; text-align: center; border-color: rgba(99,102,241,0.25);">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏠</div>
+                    <h4 style="font-family: var(--font-heading); font-size: 0.95rem; margin-bottom: 0.25rem;">Easy Listing</h4>
+                    <p style="font-size: 0.75rem; color: var(--text-muted);">List your property in under 5 minutes with our smart form wizard.</p>
+                </div>
+                <div class="section-card" style="padding: 1.25rem; text-align: center; border-color: rgba(6,182,212,0.25);">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">👥</div>
+                    <h4 style="font-family: var(--font-heading); font-size: 0.95rem; margin-bottom: 0.25rem;">Verified Tenants</h4>
+                    <p style="font-size: 0.75rem; color: var(--text-muted);">All renters browsing your listing are ID-verified community members.</p>
+                </div>
+                <div class="section-card" style="padding: 1.25rem; text-align: center; border-color: rgba(16,185,129,0.25);">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📊</div>
+                    <h4 style="font-family: var(--font-heading); font-size: 0.95rem; margin-bottom: 0.25rem;">Live Analytics</h4>
+                    <p style="font-size: 0.75rem; color: var(--text-muted);">Track listing views, inquiry counts, and conversion rates in real time.</p>
+                </div>
+                <div class="section-card" style="padding: 1.25rem; text-align: center; border-color: rgba(245,158,11,0.25);">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔒</div>
+                    <h4 style="font-family: var(--font-heading); font-size: 0.95rem; margin-bottom: 0.25rem;">Secure & Private</h4>
+                    <p style="font-size: 0.75rem; color: var(--text-muted);">Your personal details and property data are encrypted and never shared.</p>
+                </div>
+            </div>
+
+            <!-- Listing Registration Form -->
+            <div class="property-register-section">
+                <div class="property-register-wrapper">
+                    <div class="form-header-inline" style="margin-bottom: 1.75rem;">
+                        <h3 class="form-title">Property Details Form</h3>
+                        <p class="form-subtitle">Complete all sections. Your listing will be immediately visible on the Dashboard to all registered users.</p>
+                    </div>
+
+                    <form id="register-home-form" novalidate>
+                        <div class="form-grid">
+
+                            <div class="form-group">
+                                <label for="prop-title">Property Title <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <input type="text" id="prop-title" name="prop-title" placeholder="e.g. Cozy 3BHK Apartment in Downtown" required>
+                                </div>
+                                <span class="error-msg" id="err-prop-title"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="prop-location">City / Location <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <input type="text" id="prop-location" name="prop-location" placeholder="e.g. Austin, TX" required>
+                                </div>
+                                <span class="error-msg" id="err-prop-location"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="prop-price">Monthly Rent (USD) <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <input type="text" id="prop-price" name="prop-price" placeholder="e.g. 1500 or $2,200" required>
+                                </div>
+                                <span class="error-msg" id="err-prop-price"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="prop-beds">Number of Bedrooms <span class="required">*</span></label>
+                                <div class="select-wrapper">
+                                    <select id="prop-beds" name="prop-beds" required>
+                                        <option value="1">1 Bedroom</option>
+                                        <option value="2">2 Bedrooms</option>
+                                        <option value="3" selected>3 Bedrooms</option>
+                                        <option value="4">4 Bedrooms</option>
+                                        <option value="5">5 Bedrooms</option>
+                                        <option value="6+">6+ Bedrooms</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="prop-baths">Number of Bathrooms <span class="required">*</span></label>
+                                <div class="select-wrapper">
+                                    <select id="prop-baths" name="prop-baths" required>
+                                        <option value="1">1 Bathroom</option>
+                                        <option value="2" selected>2 Bathrooms</option>
+                                        <option value="3">3 Bathrooms</option>
+                                        <option value="4">4 Bathrooms</option>
+                                        <option value="5+">5+ Bathrooms</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="prop-image">Property Image Style <span class="required">*</span></label>
+                                <div class="select-wrapper">
+                                    <select id="prop-image" name="prop-image" required>
+                                        <option value="villa">🏡 Villa / Luxury Estate</option>
+                                        <option value="apartment">🏢 Apartment / Urban Loft</option>
+                                        <option value="cabin">🌲 Cabin / Rural Retreat</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="prop-desc">Property Description <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <textarea id="prop-desc" name="prop-desc" rows="4" placeholder="Describe your property: amenities, nearby landmarks, unique features, furnishing status, pet policy, etc." required></textarea>
+                                </div>
+                                <span class="error-msg" id="err-prop-desc"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-actions" style="margin-top: 1.5rem;">
+                            <button type="reset" class="btn btn-secondary">Clear Form</button>
+                            <button type="submit" class="btn btn-primary" id="btn-register-property">
+                                🏠 Register My Property
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <div class="footer-container">
+            <p class="copyright">&copy; 2026 Homely Inc. All rights reserved.</p>
+            <p class="credits">Designed &amp; Developed by <span class="designer-highlight">VIJAYKUMAR</span> (Reg No: 2303717620521058)</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top-btn" id="back-to-top-btn" aria-label="Scroll back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="18 15 12 9 6 15"/>
+        </svg>
+    </button>
+
+    <div class="toast-notification" id="toast-notif" aria-hidden="true">
+        <div class="toast-body">
+            <span class="toast-message" id="toast-message">Notification details appear here.</span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

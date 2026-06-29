@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homely - Premium House Rental Solutions</title>
-    <!-- Google Fonts for premium typography -->
+    <title>Homely - Operations Dashboard & Property Listings</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Premium Floating Background Blobs -->
+    <!-- Background Blobs -->
     <div class="bg-glow blob-1"></div>
     <div class="bg-glow blob-2"></div>
     <div class="bg-glow blob-3"></div>
 
-    <!-- Top Sticky Header -->
+    <!-- Header -->
     <header class="app-header">
         <div class="header-container">
             <div class="logo-area">
-                <!-- SVG Icon for Homely House Logo -->
                 <div class="logo-wrapper">
                     <svg class="app-logo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3 9.5L12 3L21 9.5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H15V15H9V21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V9.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -30,10 +28,10 @@
                 </div>
                 <div class="brand-details">
                     <h1 class="app-name">Homely</h1>
-                    <span class="app-tagline" id="typing-tagline">Premium House Rental Solutions</span>
+                    <span class="app-tagline">Premium House Rental Solutions</span>
                 </div>
             </div>
-            <!-- Student Portfolio Details Badge -->
+            <!-- Student Details -->
             <div class="student-badge">
                 <div class="badge-item">
                     <span class="badge-label">Student Name</span>
@@ -45,9 +43,8 @@
                 </div>
             </div>
 
-            <!-- Header Interaction Actions (Clock, Theme, Notifications) -->
+            <!-- Actions -->
             <div class="header-actions">
-                <!-- Live Clock Area -->
                 <div class="header-clock" id="header-clock">
                     <div class="clock-icon">🕒</div>
                     <div class="clock-details">
@@ -55,16 +52,12 @@
                         <span class="clock-date" id="live-date">Monday, Jan 1, 2026</span>
                     </div>
                 </div>
-                
-                <!-- Theme Switcher Button -->
                 <div class="theme-switcher-container">
                     <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle dark/light theme">
                         <span class="sun-icon">☀️</span>
                         <span class="moon-icon">🌙</span>
                     </button>
                 </div>
-
-                <!-- Notification Bell -->
                 <div class="notification-trigger-container" id="notif-trigger-container">
                     <button class="notif-bell-btn" id="notif-bell-btn" aria-label="Toggle notifications">
                         <svg class="bell-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -73,7 +66,6 @@
                         </svg>
                         <span class="notif-badge-count" id="notif-badge-count">3</span>
                     </button>
-                    <!-- Notification Dropdown Panel -->
                     <div class="notif-dropdown-panel" id="notif-dropdown-panel" aria-hidden="true">
                         <div class="notif-panel-header">
                             <h4>System Alerts</h4>
@@ -114,7 +106,7 @@
         </div>
     </header>
 
-    <!-- Navigation Bar -->
+    <!-- Navbar -->
     <nav class="app-navbar" id="main-navbar">
         <div class="nav-container">
             <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
@@ -123,8 +115,8 @@
                 <span></span>
             </button>
             <ul class="nav-links" id="nav-links">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
                 <li><a href="features.html" class="nav-link">Features</a></li>
                 <li><a href="services.html" class="nav-link">Services</a></li>
                 <li><a href="reports.html" class="nav-link">Reports</a></li>
@@ -135,112 +127,123 @@
         </div>
     </nav>
 
-    <!-- Announcement Banner using marquee -->
-    <div class="announcement-banner">
-        <div class="banner-label">Latest Updates</div>
-        <marquee behavior="scroll" direction="left" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();" id="announcement-marquee">
-            📢 <strong>New Policy:</strong> Security deposit caps reduced to a maximum of 2 months' rent. | 🏢 <strong>Feature Update:</strong> Direct landlord-tenant chat is now active! | 🌟 <strong>Market Alert:</strong> Rental demand has increased by 15% in suburban sectors. | 💳 <strong>Maintenance Notice:</strong> Online payment systems will undergo scheduled upgrades on Saturday at 2:00 AM UTC.
-        </marquee>
-    </div>
-
-    <!-- Main Container -->
+    <!-- Main Content -->
     <main class="main-content">
-        <!-- 3. Welcome Section -->
-        <section id="home" class="content-section welcome-section animate-fade-in">
-            <div class="section-card welcome-hero">
-                <div class="hero-layout">
-                    <div class="hero-text-content">
-                        <span class="hero-badge animate-pulse">Smart Rental Dashboard</span>
-                        <h2 class="welcome-title">Streamline Your Rental Management</h2>
-                        <p class="project-description">
-                            Homely is a state-of-the-art house rental platform designed to unify the leasing experience. By automating rent distribution, background checks, maintenance workflows, and electronic lease contracts, Homely bridges the gap between landlords, renters, and maintenance agencies inside a single premium interface.
-                        </p>
-                    </div>
-                    <div class="hero-visual">
-                        <!-- Custom vector-like graphic representation of a home and keys -->
-                        <div class="home-graphic-card">
-                            <div class="home-graphic-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z" />
-                                    <polyline points="9 22 9 12 15 12 15 22" />
-                                </svg>
-                            </div>
-                            <div class="graphic-line-row">
-                                <span class="line line-long"></span>
-                                <span class="line line-short"></span>
-                            </div>
-                            <div class="graphic-line-row">
-                                <span class="line line-medium"></span>
-                                <span class="line line-long"></span>
-                            </div>
+        <!-- Dashboard Statistics -->
+        <section id="dashboard" class="content-section dashboard-section">
+            <div class="section-header-row">
+                <div>
+                    <h2 class="section-title">Operations Control</h2>
+                    <p class="section-subtitle">Real-time statistics of the rental platform ecosystem.</p>
+                </div>
+                <span class="live-indicator">
+                    <span class="dot"></span> Live Data
+                </span>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card" id="stat-total-users">
+                    <div class="stat-header">
+                        <span class="stat-label">Total Registered Users</span>
+                        <div class="stat-icon users-bg">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
                         </div>
+                    </div>
+                    <div class="stat-body">
+                        <h3 class="stat-value" id="val-total-users">0</h3>
+                        <div class="sparkline-wrapper users-stroke">
+                            <svg class="stat-chart" viewBox="0 0 100 30" preserveAspectRatio="none">
+                                <path d="M0,28 L10,25 L20,27 L30,20 L40,22 L50,15 L60,18 L70,12 L80,10 L90,5 L100,2" fill="none" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <span class="stat-trend trend-up">▲ 12.4% this month</span>
                     </div>
                 </div>
 
-                <div class="vision-mission-grid">
-                    <div class="vm-card vision-card">
-                        <div class="vm-icon-wrapper">
-                            <svg class="vm-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
-                                <circle cx="12" cy="12" r="3"/>
+                <div class="stat-card" id="stat-active-users">
+                    <div class="stat-header">
+                        <span class="stat-label">Active Renters Online</span>
+                        <div class="stat-icon active-bg">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
                             </svg>
                         </div>
-                        <h3>Our Vision</h3>
-                        <p>To redefine residential renting by creating a seamless, transparent, and digitally empowered ecosystem where finding and managing homes is completely stress-free.</p>
                     </div>
-                    <div class="vm-card mission-card">
-                        <div class="vm-icon-wrapper">
-                            <svg class="vm-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>
+                    <div class="stat-body">
+                        <h3 class="stat-value" id="val-active-users">0</h3>
+                        <div class="sparkline-wrapper active-stroke">
+                            <svg class="stat-chart" viewBox="0 0 100 30" preserveAspectRatio="none">
+                                <path d="M0,28 L10,20 L20,18 L30,22 L40,15 L50,22 L60,12 L70,14 L80,8 L90,10 L100,5" fill="none" stroke-width="2"></path>
                             </svg>
                         </div>
-                        <h3>Our Mission</h3>
-                        <p>To provide managers and tenants with robust automated tools, real-time analytics, and instant support to ensure safe and happy housing communities globally.</p>
+                        <span class="stat-trend trend-up">▲ 8.5% daily avg</span>
+                    </div>
+                </div>
+
+                <div class="stat-card" id="stat-revenue">
+                    <div class="stat-header">
+                        <span class="stat-label">Monthly Gross Revenue</span>
+                        <div class="stat-icon revenue-bg">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="1" x2="12" y2="23"/>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="stat-body">
+                        <h3 class="stat-value" id="val-revenue">$0</h3>
+                        <div class="sparkline-wrapper revenue-stroke">
+                            <svg class="stat-chart" viewBox="0 0 100 30" preserveAspectRatio="none">
+                                <path d="M0,29 L10,29 L20,25 L30,22 L40,25 L50,15 L60,10 L70,8 L80,12 L90,4 L100,1" fill="none" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <span class="stat-trend trend-up">▲ 18.2% projected</span>
+                    </div>
+                </div>
+
+                <div class="stat-card" id="stat-transactions">
+                    <div class="stat-header">
+                        <span class="stat-label">Completed Payments</span>
+                        <div class="stat-icon transactions-bg">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="5" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="2" y1="10" x2="22" y2="10"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="stat-body">
+                        <h3 class="stat-value" id="val-transactions">0</h3>
+                        <div class="sparkline-wrapper transactions-stroke">
+                            <svg class="stat-chart" viewBox="0 0 100 30" preserveAspectRatio="none">
+                                <path d="M0,25 L15,22 L30,28 L45,15 L60,18 L75,10 L90,12 L100,5" fill="none" stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <span class="stat-trend trend-up">▲ 4.3% this week</span>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Image Slider / Carousel Section -->
-            <div class="section-card property-carousel-container" style="margin-top: 2rem;">
-                <div class="carousel-header">
-                    <h3 class="carousel-title">Featured Premium Listings</h3>
-                    <p class="carousel-subtitle">Explore a selection of our handpicked rental estates available today.</p>
+        <!-- Dynamic Properties Catalog Grid -->
+        <section class="content-section properties-catalog-container scroll-reveal">
+            <div class="section-header-row">
+                <div>
+                    <h2 class="section-title">Homes Available For Rent</h2>
+                    <p class="section-subtitle">Browse property listings uploaded by verified system landlords.</p>
                 </div>
-                <div class="carousel-slider" id="property-slider">
-                    <!-- Slides -->
-                    <div class="carousel-slide active" data-slide="0">
-                        <img src="images/villa_exterior.png" alt="Luxury Villa Exterior" class="slider-image">
-                        <div class="slide-caption">
-                            <h4>The Summit Glass Villa</h4>
-                            <p>📍 Beverly Hills, CA | 5 Beds, 6 Baths | $4,500/month</p>
-                        </div>
-                    </div>
-                    <div class="carousel-slide" data-slide="1">
-                        <img src="images/apartment_interior.png" alt="Modern Penthouse Living" class="slider-image">
-                        <div class="slide-caption">
-                            <h4>Metropolitan Loft Penthouse</h4>
-                            <p>📍 Manhattan, NY | 3 Beds, 3 Baths | $3,800/month</p>
-                        </div>
-                    </div>
-                    <div class="carousel-slide" data-slide="2">
-                        <img src="images/cabin_forest.png" alt="Forest Cabin Retreat" class="slider-image">
-                        <div class="slide-caption">
-                            <h4>Eldorado Forest Cabin</h4>
-                            <p>📍 Aspen, CO | 4 Beds, 3.5 Baths | $2,900/month</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Manual Navigation Arrows -->
-                    <button class="slider-arrow arrow-left" id="slider-arrow-left" aria-label="Previous image">‹</button>
-                    <button class="slider-arrow arrow-right" id="slider-arrow-right" aria-label="Next image">›</button>
-                    
-                    <!-- Slide Dots -->
-                    <div class="slider-dots" id="slider-dots">
-                        <span class="dot active" data-slide="0"></span>
-                        <span class="dot" data-slide="1"></span>
-                        <span class="dot" data-slide="2"></span>
-                    </div>
-                </div>
+                <a href="register-home.html" class="btn btn-secondary" style="text-decoration: none; font-size: 0.8rem; padding: 0.5rem 1rem;">List Your Home</a>
+            </div>
+
+            <!-- Grid rendered dynamically by JS -->
+            <div class="properties-catalog-grid" id="properties-catalog-grid">
+                <!-- Fallback content loaded dynamically by app.js -->
+                <div style="grid-column: 1/-1; text-align: center; color: var(--text-muted);">Loading property listings database...</div>
             </div>
         </section>
     </main>
@@ -253,21 +256,21 @@
         </div>
     </footer>
 
-    <!-- Floating Back to Top Button -->
+    <!-- Back to Top -->
     <button class="back-to-top-btn" id="back-to-top-btn" aria-label="Scroll back to top">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <polyline points="18 15 12 9 6 15"/>
         </svg>
     </button>
 
-    <!-- Custom Modal/Toast for interactions -->
+    <!-- Toast Toast -->
     <div class="toast-notification" id="toast-notif" aria-hidden="true">
         <div class="toast-body">
             <span class="toast-message" id="toast-message">Notification details appear here.</span>
         </div>
     </div>
 
-    <!-- Main JavaScript Logic -->
+    <!-- Scripts -->
     <script src="app.js"></script>
 </body>
 </html>
